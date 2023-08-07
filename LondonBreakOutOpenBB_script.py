@@ -14,10 +14,6 @@ currency_pair = currency_pair.drop(columns=['Volume'], axis=1)
 #display(currency_pair.head(10))
 #display(currency_pair.tail(10))
 
-tokyoStartTime = pd.to_datetime('00:00:00').time()
-tokyoEndTime = pd.to_datetime('08:00:00').time()
-tokyoDF = currency_pair.between_time(tokyoStartTime, tokyoEndTime)
-
 def calculate_tokyo_session_high_low(df):
     tokyoStartTime = pd.to_datetime('00:00:00').time()
     tokyoEndTime = pd.to_datetime('08:00:00').time()
